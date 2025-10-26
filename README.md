@@ -64,7 +64,6 @@ They’re independent. You can ask for a ton of patches (like 200) but only keep
 ## Requirements
 
 ```
-
 transformers (at least4.56.0.dev0)
 torch
 torchvision
@@ -72,8 +71,12 @@ opencv-python
 matplotlib
 timm
 numpy
+pillow
+```
 
-````
+By default, dinov3_vitb16 is selected, this attempts to download from https://huggingface.co/facebook/dinov3-vitb16-pretrain-lvd1689m, this model is gated however so you need to have a huggingface account, request access and then you need to login via `huggingface-cli login` to be able to download the weights from script.
+
+Older dino versions such as dinov2 can be selected by using `--model_type dino_vitb16`
 
 ## image search
 
