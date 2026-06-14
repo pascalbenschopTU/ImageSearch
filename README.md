@@ -82,6 +82,16 @@ Older dino versions such as dinov2 can be selected by using `--model_type dino_v
 
 Test data can be downloaded at https://www.kaggle.com/datasets/apollo2506/image-search-engine
 
+## Webcam DINO token tracker
+
+A webcam proof of concept is available in `webcam_dino_tracker/`. It lets you pause the webcam, select an object ROI, and track matching DINOv3 patch tokens in live frames.
+
+```bash
+conda activate video_features
+export PYTORCH_ENABLE_MPS_FALLBACK=1
+python webcam_dino_tracker/demo.py --device mps --model ./dinov3
+```
+
 
 Full pipeline: build index -> interactively pick descriptors -> search -> (optional) heatmaps
 
